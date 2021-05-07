@@ -11,7 +11,7 @@ app.use('/', express.static(path.join(__dirname, '..', 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/getclothing/:type/:weather/:gender', (req, res) => {
+app.get('/clothing/:type/:weather/:gender', (req, res) => {
   const { type, weather, gender } = req.params;
 
   getClothing(req.params, (err, results) => {
