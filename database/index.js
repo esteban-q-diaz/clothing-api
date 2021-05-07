@@ -1,12 +1,11 @@
-
+require('dotenv').config()
 const mysql = require('mysql');
-const { connectionData } = require('./mysql.config');
 
 const connection = mysql.createConnection({
-  host: connectionData.localhost,
-  user: connectionData.user,
-  password: connectionData.password,
-  database: connectionData.database,
+  host: process.env.localhost,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.database,
 });
 
 const getClothing = (productId, callback) => {
