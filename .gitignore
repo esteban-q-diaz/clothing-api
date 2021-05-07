@@ -1,0 +1,4 @@
+node_modules
+database/mysql.config.js
+data_generator.js
+package-lock.json
